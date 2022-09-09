@@ -1,0 +1,17 @@
+# https://github.com/jibstack64/spotispy
+
+[spotify]
+# The delay (in seconds) between loading user playlists.
+delay=2
+# Your application id and secret.
+# Don't have them? Check the GitHub.
+client_id=""
+client_secret=""
+
+[logger]
+# Verbose?
+to_console=true
+# The file path to write logs to; set as empty string to disable.
+to_file=""
+# If one is provided, the program will send logs to the Discord webhook url provided.
+to_webhook=""
