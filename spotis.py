@@ -94,8 +94,12 @@ def listen(u_id: str):
     time.sleep(DELAY)    
 
 try:
-    for u in USER_URLS:
-        threading.Thread(target=listen, args=(u.split("user/")[1].split("?")[0],)).start()
+    if len(USER_URLS) > 0:
+        for u in USER_URLS:
+            threading.Thread(target=listen, args=(u.split("user/")[1].split("?")[0],)).start()
+    else:
+        print("No user URLs provided.")
+        quit()
     
     # Main run loop; locks thread
     while running:
